@@ -221,6 +221,34 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-MediumItalic.eot");
+  src: url("../../fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-MediumItalic.woff2") format("woff2"), url("../../fonts/Exo-MediumItalic.woff") format("woff"), url("../../fonts/Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-LightItalic.eot");
+  src: url("../../fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-LightItalic.woff2") format("woff2"), url("../../fonts/Exo-LightItalic.woff") format("woff"), url("../../fonts/Exo-LightItalic.svg#Exo-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Light.eot");
+  src: url("../../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Light.woff2") format("woff2"), url("../../fonts/Exo-Light.woff") format("woff"), url("../../fonts/Exo-Light.svg#Exo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Medium.eot");
+  src: url("../../fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Medium.woff2") format("woff2"), url("../../fonts/Exo-Medium.woff") format("woff"), url("../../fonts/Exo-Medium.svg#Exo-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -292,12 +320,17 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
+  font-family: 'Exo', sans-serif;
+  min-height: 100hv;
   /* Fallback for when there is no custom background color defined. */ }
 
-blockquote, q {
+blockquote,
+q {
   quotes: "" ""; }
-  blockquote:before, blockquote:after, q:before, q:after {
+  blockquote:before, blockquote:after,
+  q:before,
+  q:after {
     content: ""; }
 
 hr {
@@ -306,7 +339,8 @@ hr {
   height: 1px;
   margin-bottom: 1.5rem; }
 
-ul, ol {
+ul,
+ol {
   margin: 0 0 1.5rem 3rem; }
 
 ul {
@@ -336,43 +370,44 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+/*************************************************
+				menu mobile
+**************************************************/
+.footer-navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 4.5rem 0 3rem;
+  list-style-type: none; }
+  .footer-navigation ul li {
+    border-right: 1px solid #fff;
+    line-height: 1;
+    padding: 0 1rem; }
+
+.entry-content,
+.entry-title {
+  color: #fff;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: 100; }
+
+.page_item p {
+  color: #fff; }
+
+#new-quote-button {
+  border: 2px solid #00cc00;
+  background: transparent;
+  color: #00cc00;
+  font-size: 1rem;
+  font-family: 'Exo', sans-serif;
+  padding: .5rem 2.4rem; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: .75rem;
-  line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
-
 /* Fields */
 input[type="text"],
 input[type="email"],
@@ -402,20 +437,16 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+button:focus {
+  outline: 0; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
+  color: #00cc00;
+  font-weight: 100; }
 
 /* Menus */
 .main-navigation {
@@ -566,6 +597,15 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5rem; }
+
+/*************************************************
+				home page mobile
+**************************************************/
+.container {
+  margin: 0 auto;
+  max-width: 100hv;
+  padding: 2.5%;
+  width: 100%; }
 
 /*--------------------------------------------------------------
 # Media

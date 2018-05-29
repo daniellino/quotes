@@ -3,68 +3,114 @@
 --------------------------------------------------------------*/
 
 html {
-	box-sizing: border-box;
-	font-size: 1rem;
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+*:after {
+    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    box-sizing: inherit;
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+    background: $color__background-body;
+    font-family: 'Exo', sans-serif;
+    min-height: 100hv;
+    /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote, q {
-	quotes: "" "";
-
-	&:before,
-	&:after {
-		content: "";
-	}
+blockquote,
+q {
+    quotes: "" "";
+    &:before,
+    &:after {
+        content: "";
+    }
 }
 
 hr {
-	background-color: $color__background-hr;
-	border: 0;
-	height: 1px;
-	margin-bottom: $base__space-unit;
+    background-color: $color__background-hr;
+    border: 0;
+    height: 1px;
+    margin-bottom: $base__space-unit;
 }
 
-ul, ol {
-	margin: 0 0 $base__space-unit ($base__space-unit * 2);
+ul,
+ol {
+    margin: 0 0 $base__space-unit ($base__space-unit * 2);
 }
 
 ul {
-	list-style: disc;
+    list-style: disc;
 }
 
 ol {
-	list-style: decimal;
+    list-style: decimal;
 }
 
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: $base__space-unit;
+li>ul,
+li>ol {
+    margin-bottom: 0;
+    margin-left: $base__space-unit;
 }
 
 dt {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 dd {
-	margin: 0 $base__space-unit $base__space-unit;
+    margin: 0 $base__space-unit $base__space-unit;
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+    height: auto;
+    /* Make sure images are scaled correctly. */
+    max-width: 100%;
+    /* Adhere to container width. */
 }
 
 table {
-	margin: 0 0 $base__space-unit;
-	width: 100%;
+    margin: 0 0 $base__space-unit;
+    width: 100%;
+}
+
+
+/*************************************************
+				menu mobile
+**************************************************/
+
+.footer-navigation ul {
+    & li {
+        border-right: 1px solid #fff;
+        line-height: 1;
+        padding: 0 1rem;
+    }
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 4.5rem 0 3rem;
+    list-style-type: none;
+}
+
+.entry-content,
+.entry-title {
+    color: #fff;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.page_item p {
+    color: #fff;
+}
+
+#new-quote-button {
+    border: 2px solid $color__green-text;
+    background: transparent;
+    color: $color__green-text;
+    font-size: 1rem;
+    font-family: 'Exo', sans-serif;
+    padding: .5rem 2.4rem;
 }

@@ -2,32 +2,45 @@
 # Content
 --------------------------------------------------------------*/
 
+
 /* Posts and pages */
 
 .sticky {
-	display: block;
+    display: block;
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+    margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
-	display: none;
+.updated:not(.published) {
+    display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+    display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+    margin: $base__space-unit 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+    clear: both;
+    margin: 0 0 $base__space-unit;
+}
+
+
+/*************************************************
+				home page mobile
+**************************************************/
+
+.container {
+    margin: 0 auto;
+    max-width: 100hv;
+    padding: 2.5%;
+    width: 100%;
 }
