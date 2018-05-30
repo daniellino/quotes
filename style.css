@@ -323,7 +323,11 @@ body {
   background: #222222;
   font-family: 'Exo', sans-serif;
   min-height: 100hv;
+  color: #fff;
   /* Fallback for when there is no custom background color defined. */ }
+
+ul {
+  padding: 0; }
 
 blockquote,
 q {
@@ -339,12 +343,10 @@ hr {
   height: 1px;
   margin-bottom: 1.5rem; }
 
-ul,
-ol {
-  margin: 0 0 1.5rem 3rem; }
-
-ul {
-  list-style: disc; }
+ul li {
+  display: inline-block; }
+  ul li a {
+    text-decoration: none; }
 
 ol {
   list-style: decimal; }
@@ -370,31 +372,36 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
-/*************************************************
-				menu mobile
-**************************************************/
-.footer-navigation ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+/********************************************************************
+				for mobile and smaller than 600 px 
+*********************************************************************/
+.red-link-para {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 100; }
+
+.site-info {
   margin: 4.5rem 0 3rem;
   list-style-type: none; }
-  .footer-navigation ul li {
-    border-right: 1px solid #fff;
+  .site-info li {
     line-height: 1;
+    list-style-type: none; }
+  .site-info li:first-child {
+    border-right: 1px solid #fff;
+    padding-right: 1rem; }
+  .site-info li:nth-child(2) {
+    border-right: 1px solid #fff;
     padding: 0 1rem; }
+  .site-info li:nth-child(3) {
+    padding-left: 1rem;
+    padding-right: 1rem; }
 
-.entry-content,
-.entry-title {
+.entry-title,
+.entry-content p {
   color: #fff;
   line-height: 1.5;
   font-size: 1.2rem;
   font-weight: 100; }
-
-.page_item p {
-  color: #fff; }
 
 #new-quote-button {
   border: 2px solid #00cc00;
@@ -402,7 +409,46 @@ table {
   color: #00cc00;
   font-size: 1rem;
   font-family: 'Exo', sans-serif;
-  padding: .5rem 2.4rem; }
+  padding: .5rem 2.4rem;
+  margin-top: 42px; }
+  #new-quote-button:hover {
+    color: #028402;
+    border-color: #028402; }
+
+.logo a img {
+  width: 300px; }
+
+/*************************************************
+				for 620 px and biger
+**************************************************/
+@media only screen and (min-width: 620px) {
+  body {
+    background-color: #713177; }
+  .logo a img {
+    width: 500px; }
+  .site-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .site-info li:nth-child(3) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-right: 1px solid #fff; }
+  .red-link-para {
+    padding-left: 1rem; }
+  .entry-content p {
+    line-height: 1.5;
+    font-size: 1.7rem;
+    font-weight: 100; } }
+
+/*************************************************
+				for 1080 px and biger
+**************************************************/
+@media only screen and (min-width: 1080px) {
+  body {
+    background-color: #4b1013; } }
 
 /*--------------------------------------------------------------
 # Forms
@@ -446,55 +492,14 @@ button:focus {
 /* Links */
 a {
   color: #00cc00;
-  font-weight: 100; }
+  font-weight: 100;
+  text-decoration: none; }
 
 /* Menus */
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block; }
-
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
