@@ -122,10 +122,36 @@ table {
 {
     color: #fff;
     line-height: 1.5;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 100;
     margin: 0;
     display: inline;
+}
+
+.entry-header {
+    margin-top: 3rem;
+    h1 {
+        font-size: 2em;
+        font-weight: 400;
+    }
+}
+
+.browse-archives ul li a {
+    margin-right: 1.125rem;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.browse-archives h2 {
+    font-weight: 400;
+}
+
+.page-template-default .entry-content p {
+    &:nth-child(2) {
+        display: block;
+        margin: 1.5rem 0 0;
+    }
+    font-size: 1rem;
 }
 
 #new-quote-button {
@@ -195,6 +221,9 @@ table {
     #new-quote-button {
         //formating button*********************************************
         font-size: 1.2rem;
+    }
+    .browse-archives ul li a {
+        font-size: 1.25rem !important;
     }
 }
 
