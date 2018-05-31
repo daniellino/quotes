@@ -483,7 +483,23 @@ table {
   .entry-content p {
     line-height: 1.5;
     font-size: 2.5rem;
-    font-weight: 100; } }
+    font-weight: 100; }
+  .entry-content::before {
+    content: '\f10d';
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: -150PX;
+    top: -30px;
+    font-size: 8rem;
+    color: #00cc00; }
+  .entry-content::after {
+    content: '\f10e';
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: -150PX;
+    top: -30px;
+    font-size: 8rem;
+    color: #00cc00; } }
 
 /*--------------------------------------------------------------
 # Forms
