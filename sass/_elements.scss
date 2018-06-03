@@ -186,11 +186,16 @@
 **************************************************/
     
     #quote-submission-form input {
+        color: #fff;
         display: block;
         background-color: $color__background-body;
         border-color: $color__green-text;
         margin-top: .5rem;
         margin-bottom: 1rem;
+        &:focus {
+            border: 2px solid #fff !important;
+            outline: none !important;
+        }
     }
     
     #quote-content {
@@ -198,6 +203,11 @@
         border-color: $color__green-text;
         margin-top: .5rem;
         margin-bottom: 1rem;
+        color: #fff;
+        &:focus {
+            border: 2px solid #fff !important;
+            outline: none !important;
+        }
     }
     
     #quote-submission-form [type=submit] {
@@ -222,7 +232,7 @@
         font-weight: 100;
     }
     
-    .type-post .entry-content {
+    .archive .entry-content {
         border-top: 1px dotted $color__background-screen;
         padding-top: 3rem;
     }
@@ -232,9 +242,65 @@
         padding-top: 3rem;
     }
     
+    .number-pagination a {
+        margin-left: .5rem;
+    }
+    
     .archive h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 400;
+    }
+    
+    .error404 .clearfix {
+        border: none;
+        border-width: 2px;
+        border-radius: 4px;
+    }
+    
+    .error404 .page-content p {
+        font-weight: 100;
+    }
+    
+    .search-submit {
+        color: $color__green-text;
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+    }
+    
+    .search-field {
+        background: transparent;
+    }
+    
+    input[type=search] {
+        border: 2px solid $color__green-text !important;
+        width: 240px;
+        padding: 4px !important;
+        font-family: 'Exo', sans-serif;
+        font-size: 1.2rem;
+        color: #fff !important;
+        &:focus {
+            border: 2px solid #fff !important;
+            outline: none !important;
+        }
+    }
+    /*************************************************
+				style for search result page
+**************************************************/
+    
+    .search-results p {
+        font-weight: 100;
+    }
+    
+    .search-results h1.page-title {
+        font-weight: 400;
+        border-bottom: 1px dotted $color__background-screen;
+        padding-bottom: 2rem;
+    }
+    
+    .search-result .number-pagination {
+        border-top: none;
+        padding-top: 3rem;
     }
     /*************************************************
 				for 620 px and biger
@@ -243,7 +309,7 @@
     @media only screen and (min-width: 620px) {
         //rsponsive for sizes biger than 600px*******************************
         body {
-            background-color: rgb(113, 49, 119);
+            // background-color: rgb(113, 49, 119);
             //temp color change for media query
         }
         .logo a img {
@@ -284,7 +350,7 @@
     @media only screen and (min-width: 1080px) {
         //rsponsive for sizes biger than 600px*******************************
         body {
-            background-color: rgb(75, 16, 19);
+            // background-color: rgb(75, 16, 19);
             //temp color change for media query
         }
         .site-content {
