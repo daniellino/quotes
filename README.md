@@ -1,23 +1,32 @@
 # Quotes on Dev Starter
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+This is a WordPress theme for the Quotes on Dev website, which is created combining JavaScript and WordPress together. The website is functioning using the WordPress REST API.
+it is a responsive website optimized for 3 screen sizes: mobile, tablet (620px) and desktop (1080px).
 
-## Installation
+## Technologies used
 
-### 1. Download me (don't clone me!)
+* HTML
+* JQuery
+* CSS
+* Javascript
+* php
+* AJAX
+* npm
+* WordPress
+* MAMP / MySQL
+* gulp
 
-Then add me to your `wp-content/themes` directory.
+## Built With
 
-### 2. Rename the `quotesondev-starter-master` directory
+* Visual Studio Code - The "Editor" - https://code.visualstudio.com/
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
+* Chrome - Testing platform
 
-### 3. Install the dev dependencies
+* GULP - Issues and all.
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
+* GIT - github
 
-### 4. Update the proxy in `gulpfile.js`
+##Learnings
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
-
-And now would be a good time to `git init` :)
+* WP REST API
+* using jquery to fetch and injects data to wordpress.
