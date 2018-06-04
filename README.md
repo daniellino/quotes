@@ -18,15 +18,20 @@ it is a responsive website optimized for 3 screen sizes: mobile, tablet (620px) 
 
 ## Built With
 
-* Visual Studio Code - The "Editor" - https://code.visualstudio.com/
+* Visual Studio Code - The "Editor"
 
 * Chrome - Testing platform
 
 * GULP - Issues and all.
 
-* GIT - github
+* GIT - version control.
 
-##Learnings
+* github - repository.
+
+## Learnings
 
 * WP REST API
-* using jquery to fetch and injects data to wordpress.
+* Using jquery to fetch and inject data to wordpress.
+* Localizing a Script and using nonce (hash code) for user authentication.
+* getting json data by adding a request to the end of a url (/wp-json/wp/v2/posts).
+* filtering fetched json data by adding parameters to the endpoint(?categories=1&categories=3).
