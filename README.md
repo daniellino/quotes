@@ -14,7 +14,7 @@ it is a responsive website optimized for 3 screen sizes: mobile, tablet (620px) 
 * npm
 * WordPress
 * MAMP / MySQL
-* gulp
+* Gulp
 
 ## Built With
 
@@ -22,16 +22,16 @@ it is a responsive website optimized for 3 screen sizes: mobile, tablet (620px) 
 
 * Chrome - Testing platform
 
-* GULP - Issues and all.
+* GULP - Workflow control.
 
-* GIT - version control.
+* GIT - Version control.
 
-* github - repository.
+* github - Repository.
 
 ## Learnings
 
 * WP REST API
-* Using jquery to fetch and inject data to wordpress.
+* Using JQuery to fetch and inject data to wordpress.
 * Localizing a Script and using nonce (hash code) for user authentication.
-* getting json data by adding a request to the end of a url (/wp-json/wp/v2/posts).
-* filtering fetched json data by adding parameters to the endpoint(?categories=1&categories=3).
+* Getting json data by adding a request to the end of a url (/wp-json/wp/v2/posts).
+* Filtering fetched json data by adding parameters to the endpoint(?categories=1&categories=3).
